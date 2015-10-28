@@ -1,0 +1,33 @@
+@import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
+@import "../bower_components/neat/app/assets/stylesheets/neat";
+
+body{
+  @include outer-container;
+  @include shift(1.25);
+
+  h6{
+    font-size: 14px;
+  }
+
+  ul{
+    @include span-columns(4);
+    @include shift(6);
+    list-style-type: none;
+
+
+    li.repo-name{
+      padding: 40px 0px;
+      border-top: 1px solid #DDDDDD;
+
+      &:last-of-type{
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      a{
+        text-decoration: none;
+        color: #4078C0;
+        font-size: 24px;
+      }
+    }
+  }
+}
