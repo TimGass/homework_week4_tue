@@ -37,8 +37,22 @@ body {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 100%; }
+      width: 100%;
+      margin-bottom: 0px; }
       body section.profile h1:last-child {
+        margin-right: 0; }
+      body section.profile h1:nth-child(1) {
+        margin-right: 0; }
+    body section.profile h2 {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%;
+      font-size: 18px;
+      margin-top: 0px;
+      color: #666666;
+      font-weight: lighter; }
+      body section.profile h2:last-child {
         margin-right: 0; }
     body section.profile h6 {
       float: left;

@@ -27,6 +27,7 @@ $.getJSON("https://api.github.com/users/TimGass").done(function(data){
   var year = time.getFullYear();
   profile.append("<img src=" + profileObj.avatar_url + "alt=a blank avatar that looks like a series of blocks />");
   profile.append("<h1> " + profileObj.name + " </h1>");
+  profile.append("<h2> " + profileObj.login + " </h2>");
   profile.append("<h6> " + profileObj.location + " </h6>");
   profile.append("<h6> Joined on " + month + "/" + day + "/" + year + " </h6>");
   profile.append("<a href=#> <strong>" + profileObj.followers + "</strong> Followers </a>");
