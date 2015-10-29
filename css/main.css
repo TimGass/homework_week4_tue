@@ -1,0 +1,113 @@
+html {
+  box-sizing: border-box; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+body {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-left: 10.66226%;
+  padding-top: 20px; }
+  body::after {
+    clear: both;
+    content: "";
+    display: table; }
+  body section.profile {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%; }
+    body section.profile:last-child {
+      margin-right: 0; }
+    body section.profile:nth-child(1) {
+      margin-right: 0; }
+    body section.profile img {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 65.88078%;
+      border-radius: 5%; }
+      body section.profile img:last-child {
+        margin-right: 0; }
+    body section.profile h1 {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      body section.profile h1:last-child {
+        margin-right: 0; }
+    body section.profile h6 {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%;
+      font-size: 14px;
+      padding: 5px;
+      margin: 0px; }
+      body section.profile h6:last-child {
+        margin-right: 0; }
+      body section.profile h6:first-of-type {
+        border-top: 1px solid #EEEEEE; }
+      body section.profile h6:last-of-type {
+        border-bottom: 1px solid #EEEEEE; }
+    body section.profile a {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 27.49666%;
+      text-decoration: none;
+      color: #767676;
+      padding: 20px 0px;
+      border-bottom: 1px solid #EEEEEE; }
+      body section.profile a:last-child {
+        margin-right: 0; }
+      body section.profile a:hover {
+        color: blue; }
+      body section.profile a strong {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 100%;
+        margin-left: 25.58941%;
+        font-size: 24px;
+        color: #4078C0; }
+        body section.profile a strong:last-child {
+          margin-right: 0; }
+      body section.profile a:last-of-type strong {
+        margin-left: 21.32451%; }
+      body section.profile a:last-of-type:nth-child(n) {
+        margin-right: 0; }
+    body section.profile h4 {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      body section.profile h4:last-child {
+        margin-right: 0; }
+  body ul {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 57.35098%;
+    list-style-type: none; }
+    body ul:last-child {
+      margin-right: 0; }
+    body ul li.repo-name {
+      padding: 40px 0px;
+      border-top: 1px solid #DDDDDD; }
+      body ul li.repo-name:last-of-type {
+        border-bottom: 1px solid #DDDDDD; }
+      body ul li.repo-name a {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 100%;
+        text-decoration: none;
+        color: #4078C0;
+        font-size: 24px; }
+        body ul li.repo-name a:last-child {
+          margin-right: 0; }

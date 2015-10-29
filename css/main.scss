@@ -1,0 +1,90 @@
+@import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
+@import "../bower_components/neat/app/assets/stylesheets/neat";
+
+body{
+  @include outer-container;
+  @include shift(1.25);
+  padding-top: 20px;
+
+  section.profile{
+    @include span-columns(4);
+    @include omega(1);
+
+    img{
+      @include span-columns(8);
+      border-radius: 5%;
+    }
+    h1{
+      @include span-columns(12);
+    }
+
+    h6{
+      @include span-columns(12);
+      font-size: 14px;
+      padding: 5px;
+      margin: 0px;
+
+      &:first-of-type{
+        border-top: 1px solid #EEEEEE;
+      }
+
+      &:last-of-type{
+        border-bottom: 1px solid #EEEEEE;
+      }
+    }
+
+    a{
+      @include span-columns(3.5);
+      text-decoration: none;
+      color: #767676;
+      padding: 20px 0px;
+      border-bottom: 1px solid #EEEEEE;
+
+      &:hover{
+        color: blue;
+      }
+
+      strong{
+        @include span-columns(12);
+        @include shift(3);
+        font-size: 24px;
+        color: #4078C0;
+      }
+
+      &:last-of-type{
+
+        strong{
+          @include shift(2.5);
+        }
+
+        @include omega(n);
+      }
+    }
+
+    h4{
+      @include span-columns(12);
+    }
+  }
+
+  ul{
+    @include span-columns(7);
+    list-style-type: none;
+
+
+    li.repo-name{
+      padding: 40px 0px;
+      border-top: 1px solid #DDDDDD;
+
+      &:last-of-type{
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      a{
+        @include span-columns(12);
+        text-decoration: none;
+        color: #4078C0;
+        font-size: 24px;
+      }
+    }
+  }
+}
