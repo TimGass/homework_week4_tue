@@ -1,18 +1,204 @@
 @import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
 @import "../bower_components/neat/app/assets/stylesheets/neat";
 
-body{
+header{
+  @include outer-container(100%);
+  padding: 10px;
+  background-color: #F5F5F5;
+  border-bottom: 1px solid #E5E5E5;
+
+  span{
+    color: #333333;
+
+    &#giticon{
+      @include span-columns(.4);
+      @include shift(1.25);
+      font-size: 30px;
+    }
+  }
+
+  input{
+    padding: 5px;
+    @include span-columns(3.5);
+    border-radius: 5%;
+    border: 1px solid #CCCCCC;
+    font-size: 12px;
+
+    &:focus{
+      border-color: #51A7E8;
+      outline: none;
+    }
+  }
+
+  a{
+    @include span-columns(.5);
+    padding-top: 5px;
+    font-size: 13px;
+    color: #333333;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: left;
+
+    &:first-of-type{
+      @include omega(n);
+      @include span-columns(1.2);
+      padding-right: 13px;
+    }
+
+    &:nth-of-type(2){
+      @include omega(n);
+      @include span-columns(.8);
+    }
+
+    &:nth-of-type(3){
+      text-align: left;
+      @include span-columns(2.6);
+    }
+
+    &:nth-of-type(5){
+      span{
+        font-size: 12px;
+      }
+    }
+
+    &:nth-of-type(6){
+      @include omega(n);
+    }
+  }
+
+  img{
+    @include span-columns(12);
+    @include omega(n);
+  }
+
+  #last{
+    padding-top: 8px;
+    font-size: 12px;
+  }
+}
+
+main{
   @include outer-container;
   @include shift(1.25);
   padding-top: 20px;
 
+  &:focus{
+    outline: none;
+  }
+
+  nav{
+    @include span-columns(8.75);
+    @include shift(.25);
+
+    .top{
+
+      div{
+        @include span-columns(2);
+        font-size: 14px;
+
+        &:last-of-type{
+          @include span-columns(5.2);
+        }
+      }
+
+      button.edit{
+        @include span-columns(1.8);
+        @include omega(n);
+        background-color:#F5F5F5;
+        color: #333333;
+        font-size: 13px;
+        border: 1px solid #D5D5D5;
+        border-radius: 10%;
+        font-weight: bold;
+        padding: 3px 0px;
+        line-height: 10px;
+
+        &:focus{
+          outline: none;
+        }
+      }
+    }
+
+    .bottom{
+      margin-top: 10px;
+      padding-top: 20px;
+      @include span-columns(11);
+      border-top: 1px solid #D5D5D5;
+
+      input{
+
+        &:first-of-type{
+          @include span-columns(4);
+          @include omega(1);
+          border-radius: 5%;
+          border: 1px solid #D5D5D5;
+          padding: 7px;
+          font-size: 14px;
+
+          &:focus{
+            border-color: #51A7E8;
+            outline: none;
+          }
+        }
+
+        &:last-of-type{
+          @include span-columns(1.5);
+          margin-left: 5px;
+          padding: 8px;
+          background-color:#F5F5F5;
+          color: #333333;
+          font-size: 13px;
+          border: 1px solid #D5D5D5;
+          border-radius: 7%;
+          font-weight: bold;
+
+          &:focus{
+            outline: none;
+          }
+        }
+      }
+
+      section.links{
+          padding-top: 20px;
+          @include span-columns(5);
+        a{
+          &:first-of-type{
+            padding-left: 10px;
+          }
+
+          padding-right:5px;
+          font-size:14px;
+          color: #4078C0;
+          text-decoration: none;
+        }
+      }
+
+      button.new-repo{
+        @include span-columns(1.65);
+        @include omega(1);
+        padding: 10px;
+        background-color: #72C355;
+        color: #FFF;
+        border: 1px solid #5CA941;
+        border-radius: 5%;
+        font-weight: bold;
+        font-size: 12px;
+
+        &:focus{
+          outline: none;
+        }
+      }
+    }
+
+  }
+
   section.profile{
-    @include span-columns(4);
+    @include span-columns(3);
     @include omega(1);
 
     img{
-      @include span-columns(8);
-      border-radius: 5%;
+      @include span-columns(12);
+      border-radius: 3%;
     }
 
     h1{
@@ -45,11 +231,10 @@ body{
     }
 
     a{
-      @include span-columns(3.5);
+      @include span-columns(4);
       text-decoration: none;
       color: #767676;
       padding: 20px 0px;
-      border-bottom: 1px solid #EEEEEE;
 
       &:hover{
         color: blue;
@@ -57,7 +242,7 @@ body{
 
       strong{
         @include span-columns(12);
-        @include shift(3);
+        @include shift(3.7);
         font-size: 24px;
         color: #4078C0;
       }
@@ -74,15 +259,20 @@ body{
 
     h4{
       @include span-columns(12);
+      margin: 0px;
+      padding-top: 22px;
+      border-top: 1px solid #EEEEEE;
     }
   }
 
   ul{
-    @include span-columns(7);
+    @include span-columns(8);
     list-style-type: none;
-
+    padding: 0px;
+    @include shift(.25);
 
     li.repo-name{
+      @include span-columns(12);
       padding: 40px 0px;
       border-top: 1px solid #DDDDDD;
 
@@ -91,11 +281,27 @@ body{
       }
 
       a{
-        @include span-columns(12);
+        @include span-columns(9);
+        @include omega(1);
         text-decoration: none;
         color: #4078C0;
         font-size: 24px;
       }
+
+      section.repo-stats{
+        @include span-columns(3);
+        font-size: 13px;
+        font-weight: bold;
+        color: #888888;
+        text-align: right;
+
+          span{
+            padding-left: 10px;
+            padding-right: 5px;
+          }
+      }
     }
+
+
   }
 }

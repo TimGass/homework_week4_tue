@@ -3,19 +3,57 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" media="screen">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.1.0/octicons.min.css" media="screen"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.1.0/octicons.min.css" media="screen">
     <link rel="stylesheet" href="css/main.css" media="screen">
   </head>
   <body>
-    <section class="profile">
-    </section>
-    <ul class="repos">
-    </ul>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js">
-    </script>
-    <script src="token.js">
-    </script>
-    <script src="main.js">
-    </script>
+    <header>
+      <span class="octicon octicon-mark-github" id="giticon"></span>
+      <input type="text" name="name" value="" placeholder="Search GitHub">
+      <a href="#">Pull requests</a>
+      <a href="#">Issues</a>
+      <a href="#">Gist</a>
+      <a href="#"><span class="octicon octicon-bell"></span></a>
+      <a href="#"><span class="octicon octicon-plus"></span><span class="octicon octicon-triangle-down"></span></a>
+    </header>
+    <main>
+      <section class="profile">
+      </section>
+      <nav class="repo-nav">
+        <section class="top">
+          <div class="contributions">
+            <span class="octicon octicon-diff-added"></span> Contributions
+          </div>
+          <div class="repositories">
+            <span class="octicon octicon-repo"></span> Repositories
+          </div>
+          <div class="activity">
+            <span class="octicon octicon-rss"></span> Public Activity
+          </div>
+          <button type="button" class="edit"><span class="octicon octicon-pencil"></span> Edit profile</button>
+        </section>
+        <section class="bottom">
+          <input type="text" placeholder="Find a repository..." value="">
+          <input type="button" name="name" value="Search">
+          <section class="links">
+            <a href="#">All</a>
+            <a href="#">Public</a>
+            <a href="#">Private</a>
+            <a href="#">Sources</a>
+            <a href="#">Forks</a>
+            <a href="#">Mirrors</a>
+          </section>
+          <button type="button" class="new-repo"><span class="octicon octicon-repo"></span> New</button>
+        </section>
+      </nav>
+      <ul class="repos">
+      </ul>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js">
+      </script>
+      <script src="token.js">
+      </script>
+      <script src="main.js">
+      </script>
+    </main>
   </body>
 </html>

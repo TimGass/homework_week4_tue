@@ -6,44 +6,257 @@ html {
 *::before {
   box-sizing: inherit; }
 
-body {
+header {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  background-color: #F5F5F5;
+  border-bottom: 1px solid #E5E5E5; }
+  header::after {
+    clear: both;
+    content: "";
+    display: table; }
+  header span {
+    color: #333333; }
+    header span#giticon {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 1.05427%;
+      margin-left: 10.66226%;
+      font-size: 30px; }
+      header span#giticon:last-child {
+        margin-right: 0; }
+  header input {
+    padding: 5px;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 27.49666%;
+    border-radius: 5%;
+    border: 1px solid #CCCCCC;
+    font-size: 12px; }
+    header input:last-child {
+      margin-right: 0; }
+    header input:focus {
+      border-color: #51A7E8;
+      outline: none; }
+  header a {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 1.90725%;
+    padding-top: 5px;
+    font-size: 13px;
+    color: #333333;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: left; }
+    header a:last-child {
+      margin-right: 0; }
+    header a:first-of-type {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 7.87811%;
+      padding-right: 13px; }
+      header a:first-of-type:nth-child(n) {
+        margin-right: 0; }
+      header a:first-of-type:last-child {
+        margin-right: 0; }
+    header a:nth-of-type(2) {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 4.46619%; }
+      header a:nth-of-type(2):nth-child(n) {
+        margin-right: 0; }
+      header a:nth-of-type(2):last-child {
+        margin-right: 0; }
+    header a:nth-of-type(3) {
+      text-align: left;
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 19.81984%; }
+      header a:nth-of-type(3):last-child {
+        margin-right: 0; }
+    header a:nth-of-type(5) span {
+      font-size: 12px; }
+    header a:nth-of-type(6):nth-child(n) {
+      margin-right: 0; }
+  header img {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    header img:last-child {
+      margin-right: 0; }
+    header img:nth-child(n) {
+      margin-right: 0; }
+  header #last {
+    padding-top: 8px;
+    font-size: 12px; }
+
+main {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
   margin-left: 10.66226%;
   padding-top: 20px; }
-  body::after {
+  main::after {
     clear: both;
     content: "";
     display: table; }
-  body section.profile {
+  main:focus {
+    outline: none; }
+  main nav {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 31.76157%; }
-    body section.profile:last-child {
+    width: 72.27814%;
+    margin-left: 2.13245%; }
+    main nav:last-child {
       margin-right: 0; }
-    body section.profile:nth-child(1) {
-      margin-right: 0; }
-    body section.profile img {
+    main nav .top div {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 65.88078%;
-      border-radius: 5%; }
-      body section.profile img:last-child {
+      width: 14.70196%;
+      font-size: 14px; }
+      main nav .top div:last-child {
         margin-right: 0; }
-    body section.profile h1 {
+      main nav .top div:last-of-type {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 41.99733%; }
+        main nav .top div:last-of-type:last-child {
+          margin-right: 0; }
+    main nav .top button.edit {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 12.996%;
+      background-color: #F5F5F5;
+      color: #333333;
+      font-size: 13px;
+      border: 1px solid #D5D5D5;
+      border-radius: 10%;
+      font-weight: bold;
+      padding: 3px 0px;
+      line-height: 10px; }
+      main nav .top button.edit:last-child {
+        margin-right: 0; }
+      main nav .top button.edit:nth-child(n) {
+        margin-right: 0; }
+      main nav .top button.edit:focus {
+        outline: none; }
+    main nav .bottom {
+      margin-top: 10px;
+      padding-top: 20px;
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 91.4702%;
+      border-top: 1px solid #D5D5D5; }
+      main nav .bottom:last-child {
+        margin-right: 0; }
+      main nav .bottom input:first-of-type {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 31.76157%;
+        border-radius: 5%;
+        border: 1px solid #D5D5D5;
+        padding: 7px;
+        font-size: 14px; }
+        main nav .bottom input:first-of-type:last-child {
+          margin-right: 0; }
+        main nav .bottom input:first-of-type:nth-child(1) {
+          margin-right: 0; }
+        main nav .bottom input:first-of-type:focus {
+          border-color: #51A7E8;
+          outline: none; }
+      main nav .bottom input:last-of-type {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 10.43705%;
+        margin-left: 5px;
+        padding: 8px;
+        background-color: #F5F5F5;
+        color: #333333;
+        font-size: 13px;
+        border: 1px solid #D5D5D5;
+        border-radius: 7%;
+        font-weight: bold; }
+        main nav .bottom input:last-of-type:last-child {
+          margin-right: 0; }
+        main nav .bottom input:last-of-type:focus {
+          outline: none; }
+      main nav .bottom section.links {
+        padding-top: 20px;
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 40.29137%; }
+        main nav .bottom section.links:last-child {
+          margin-right: 0; }
+        main nav .bottom section.links a {
+          padding-right: 5px;
+          font-size: 14px;
+          color: #4078C0;
+          text-decoration: none; }
+          main nav .bottom section.links a:first-of-type {
+            padding-left: 10px; }
+      main nav .bottom button.new-repo {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 11.71653%;
+        padding: 10px;
+        background-color: #72C355;
+        color: #FFF;
+        border: 1px solid #5CA941;
+        border-radius: 5%;
+        font-weight: bold;
+        font-size: 12px; }
+        main nav .bottom button.new-repo:last-child {
+          margin-right: 0; }
+        main nav .bottom button.new-repo:nth-child(1) {
+          margin-right: 0; }
+        main nav .bottom button.new-repo:focus {
+          outline: none; }
+  main section.profile {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%; }
+    main section.profile:last-child {
+      margin-right: 0; }
+    main section.profile:nth-child(1) {
+      margin-right: 0; }
+    main section.profile img {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%;
+      border-radius: 3%; }
+      main section.profile img:last-child {
+        margin-right: 0; }
+    main section.profile h1 {
       float: left;
       display: block;
       margin-right: 2.35765%;
       width: 100%;
       margin-bottom: 0px; }
-      body section.profile h1:last-child {
+      main section.profile h1:last-child {
         margin-right: 0; }
-      body section.profile h1:nth-child(1) {
+      main section.profile h1:nth-child(1) {
         margin-right: 0; }
-    body section.profile h2 {
+    main section.profile h2 {
       float: left;
       display: block;
       margin-right: 2.35765%;
@@ -52,9 +265,9 @@ body {
       margin-top: 0px;
       color: #666666;
       font-weight: lighter; }
-      body section.profile h2:last-child {
+      main section.profile h2:last-child {
         margin-right: 0; }
-    body section.profile h6 {
+    main section.profile h6 {
       float: left;
       display: block;
       margin-right: 2.35765%;
@@ -62,66 +275,92 @@ body {
       font-size: 14px;
       padding: 5px;
       margin: 0px; }
-      body section.profile h6:last-child {
+      main section.profile h6:last-child {
         margin-right: 0; }
-      body section.profile h6:first-of-type {
+      main section.profile h6:first-of-type {
         border-top: 1px solid #EEEEEE; }
-      body section.profile h6:last-of-type {
+      main section.profile h6:last-of-type {
         border-bottom: 1px solid #EEEEEE; }
-    body section.profile a {
+    main section.profile a {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 27.49666%;
+      width: 31.76157%;
       text-decoration: none;
       color: #767676;
-      padding: 20px 0px;
-      border-bottom: 1px solid #EEEEEE; }
-      body section.profile a:last-child {
+      padding: 20px 0px; }
+      main section.profile a:last-child {
         margin-right: 0; }
-      body section.profile a:hover {
+      main section.profile a:hover {
         color: blue; }
-      body section.profile a strong {
+      main section.profile a strong {
         float: left;
         display: block;
         margin-right: 2.35765%;
         width: 100%;
-        margin-left: 25.58941%;
+        margin-left: 31.56028%;
         font-size: 24px;
         color: #4078C0; }
-        body section.profile a strong:last-child {
+        main section.profile a strong:last-child {
           margin-right: 0; }
-      body section.profile a:last-of-type strong {
+      main section.profile a:last-of-type strong {
         margin-left: 21.32451%; }
-      body section.profile a:last-of-type:nth-child(n) {
+      main section.profile a:last-of-type:nth-child(n) {
         margin-right: 0; }
-    body section.profile h4 {
+    main section.profile h4 {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 100%; }
-      body section.profile h4:last-child {
+      width: 100%;
+      margin: 0px;
+      padding-top: 22px;
+      border-top: 1px solid #EEEEEE; }
+      main section.profile h4:last-child {
         margin-right: 0; }
-  body ul {
+  main ul {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 57.35098%;
-    list-style-type: none; }
-    body ul:last-child {
+    width: 65.88078%;
+    list-style-type: none;
+    padding: 0px;
+    margin-left: 2.13245%; }
+    main ul:last-child {
       margin-right: 0; }
-    body ul li.repo-name {
+    main ul li.repo-name {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%;
       padding: 40px 0px;
       border-top: 1px solid #DDDDDD; }
-      body ul li.repo-name:last-of-type {
+      main ul li.repo-name:last-child {
+        margin-right: 0; }
+      main ul li.repo-name:last-of-type {
         border-bottom: 1px solid #DDDDDD; }
-      body ul li.repo-name a {
+      main ul li.repo-name a {
         float: left;
         display: block;
         margin-right: 2.35765%;
-        width: 100%;
+        width: 74.41059%;
         text-decoration: none;
         color: #4078C0;
         font-size: 24px; }
-        body ul li.repo-name a:last-child {
+        main ul li.repo-name a:last-child {
           margin-right: 0; }
+        main ul li.repo-name a:nth-child(1) {
+          margin-right: 0; }
+      main ul li.repo-name section.repo-stats {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 23.23176%;
+        font-size: 13px;
+        font-weight: bold;
+        color: #888888;
+        text-align: right; }
+        main ul li.repo-name section.repo-stats:last-child {
+          margin-right: 0; }
+        main ul li.repo-name section.repo-stats span {
+          padding-left: 10px;
+          padding-right: 5px; }

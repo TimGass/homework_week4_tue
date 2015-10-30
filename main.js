@@ -1,6 +1,7 @@
 var profileObj;
 var reposObj;
 var profile = $(".profile");
+var languages = [];
 
 function gitTime(time){
   var seconds = (Date.now() - time)/1000;
@@ -25,6 +26,8 @@ $.getJSON("https://api.github.com/users/TimGass").done(function(data){
   var month = time.getMonth();
   var day = time.getDate();
   var year = time.getFullYear();
+  $("header").append("<a href=#><img src=" + profileObj.avatar_url + "/></a>");
+  $("header").append("<span id='last' class='octicon octicon-triangle-down'></span>");
   profile.append("<img src=" + profileObj.avatar_url + "alt=a blank avatar that looks like a series of blocks />");
   profile.append("<h1> " + profileObj.name + " </h1>");
   profile.append("<h2> " + profileObj.login + " </h2>");
@@ -54,10 +57,8 @@ $.getJSON("https://api.github.com/users/TimGass/repos").done(function(data){
 
   reposObj.forEach(function(item){
     var time = new Date(item.updated_at);
-    var repos = $("<li class=repo-name ><a href=" + item.html_url + "> " + item.name + " </a><p> updated " + gitTime(time) + " </p></li>");
+    var reposStats = "<section class=repo-stats><p> " + item.language + "<span class='octicon octicon-star'></span>" + item.stargazers_count + "<span class='octicon octicon-git-branch'></span>" + item.forks_count + "</p></section>";
+    var repos = $("<li class=repo-name ><a href=" + item.html_url + "> " + item.name + " </a>" + reposStats + "<p> updated " + gitTime(time) + " </p></li>");
     $(".repos").append(repos);
-    $(".repos").append("<section class=repo-stats></section");
-    console.log(item.languages_url);
-    $.getJSON(item.languages_url).done(function(data){ $(".repo-name").append("<p> " + Object.keys(data)[0] + " </p>") });
   });
 });
