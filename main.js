@@ -26,8 +26,7 @@ $.getJSON("https://api.github.com/users/TimGass").done(function(data){
   var month = time.getMonth();
   var day = time.getDate();
   var year = time.getFullYear();
-  $("header").append("<a href=#><img src=" + profileObj.avatar_url + "/></a>");
-  $("header").append("<span id='last' class='octicon octicon-triangle-down'></span>");
+  $("header").append("<a href=#><img src=" + profileObj.avatar_url + "/>" + "<span id='last' class='octicon octicon-triangle-down'></span></a>");
   profile.append("<img src=" + profileObj.avatar_url + "alt=a blank avatar that looks like a series of blocks />");
   profile.append("<h1> " + profileObj.name + " </h1>");
   profile.append("<h2> " + profileObj.login + " </h2>");
@@ -37,10 +36,10 @@ $.getJSON("https://api.github.com/users/TimGass").done(function(data){
   $.getJSON("https://api.github.com/users/TimGass/starred").done(function(data){
     profile.append("<a href=#> <strong>" + data.length + "</strong> starred </a>");
   });
-  profile.append("<a href=#> <strong>" + profileObj.following + "</strong> Following </a>");
-  $.getJSON("https://api.github.com/users/TimGass/orgs").done(function(data){
+  setTimeout(function(){return profile.append("<a href=#> <strong>" + profileObj.following + "</strong> Following </a>");}, 80);
+  setTimeout(function(){$.getJSON("https://api.github.com/users/TimGass/orgs").done(function(data){
     profile.append("<h4> Organizations " + data + " </h4>");
-  });
+  });}, 200);
 });
 
 $.getJSON("https://api.github.com/users/TimGass/repos").done(function(data){
