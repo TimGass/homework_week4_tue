@@ -36,10 +36,10 @@ $.getJSON("https://api.github.com/users/TimGass").done(function(data){
   $.getJSON("https://api.github.com/users/TimGass/starred").done(function(data){
     profile.append("<a href=#> <strong>" + data.length + "</strong> starred </a>");
   });
-  setTimeout(function(){return profile.append("<a href=#> <strong>" + profileObj.following + "</strong> Following </a>");}, 80);
+  setTimeout(function(){return profile.append("<a href=#> <strong>" + profileObj.following + "</strong> Following </a>");}, 100);
   setTimeout(function(){$.getJSON("https://api.github.com/users/TimGass/orgs").done(function(data){
     profile.append("<h4> Organizations " + data + " </h4>");
-  });}, 200);
+  });}, 400);
 });
 
 $.getJSON("https://api.github.com/users/TimGass/repos").done(function(data){
