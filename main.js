@@ -44,8 +44,6 @@ $.getJSON("https://api.github.com/users/TimGass").done(function(data){
 
 $.getJSON("https://api.github.com/users/TimGass/repos").done(function(data){
   reposObj = data;
-  console.log(profileObj);
-  console.log(reposObj);
 
   reposObj.sort(function(a, b){
     var yolo = new Date(a.updated_at).getTime();
