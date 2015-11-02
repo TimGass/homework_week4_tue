@@ -17,6 +17,8 @@ header {
     clear: both;
     content: "";
     display: table; }
+  header img {
+    border-radius: 7%; }
   header span {
     color: #333333; }
     header span#giticon {
@@ -291,7 +293,8 @@ main {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 23.23176%; }
+    width: 23.23176%;
+    font-size: 12px; }
     main section.profile:last-child {
       margin-right: 0; }
     main section.profile:nth-child(1) {

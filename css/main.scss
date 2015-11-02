@@ -7,6 +7,10 @@ header{
   background-color: #F5F5F5;
   border-bottom: 1px solid #E5E5E5;
 
+  img{
+    border-radius: 7%;
+  }
+
   span{
     color: #333333;
 
@@ -234,6 +238,7 @@ main{
   section.profile{
     @include span-columns(3);
     @include omega(1);
+    font-size: 12px;
 
     img{
       @include span-columns(11);
