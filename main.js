@@ -1,7 +1,6 @@
 var profileObj;
 var reposObj;
 var profile = $(".profile");
-var languages = [];
 
 function gitTime(original){
   var time = new Date(original);
