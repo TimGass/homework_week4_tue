@@ -3,7 +3,8 @@ var reposObj;
 var profile = $(".profile");
 var languages = [];
 
-function gitTime(time){
+function gitTime(original){
+  var time = new Date(original);
   var seconds = (Date.now() - time)/1000;
   var hours = Math.floor(seconds/3600);
   var days = Math.floor(hours/24);
@@ -26,20 +27,32 @@ $.getJSON("https://api.github.com/users/TimGass").done(function(data){
   var month = time.getMonth();
   var day = time.getDate();
   var year = time.getFullYear();
-  $("header").append("<a href=#><img src=" + profileObj.avatar_url + "/>" + "<span id='last' class='octicon octicon-triangle-down'></span></a>");
-  profile.append("<img src=" + profileObj.avatar_url + "alt=a blank avatar that looks like a series of blocks />");
-  profile.append("<h1> " + profileObj.name + " </h1>");
-  profile.append("<h2> " + profileObj.login + " </h2>");
-  profile.append("<h6> " + profileObj.location + " </h6>");
-  profile.append("<h6> Joined on " + month + "/" + day + "/" + year + " </h6>");
-  profile.append("<a href=#> <strong>" + profileObj.followers + "</strong> Followers </a>");
+
+  function Headergenerator(){
+    var headerTemplate = $("#header").html();
+    var compiledTemplate = _.template(headerTemplate);
+    $("header").append(compiledTemplate(profileObj));
+  }
+
+  Headergenerator();
+
+  function Profilegenerator(){
+    profileObj.time = new Date(profileObj.created_at);
+    profileObj.month = profileObj.time.getMonth();
+    profileObj.day = profileObj.time.getDate();
+    profileObj.year = profileObj.time.getFullYear();
+    var profileTemplate = $("#profile").html();
+    var compiledTemplate = _.template(profileTemplate);
+    $(".profile").append(compiledTemplate(profileObj));
+  };
+
   $.getJSON("https://api.github.com/users/TimGass/starred").done(function(data){
-    profile.append("<a href=#> <strong>" + data.length + "</strong> starred </a>");
+    profileObj.starred = data.length;
+    profileObj.organizations = $.getJSON("https://api.github.com/users/TimGass/starred").done(function(data){
+      profileObj.organizations = data;
+      Profilegenerator();
+    });
   });
-  setTimeout(function(){return profile.append("<a href=#> <strong>" + profileObj.following + "</strong> Following </a>");}, 100);
-  setTimeout(function(){$.getJSON("https://api.github.com/users/TimGass/orgs").done(function(data){
-    profile.append("<h4> Organizations " + data + " </h4>");
-  });}, 400);
 });
 
 $.getJSON("https://api.github.com/users/TimGass/repos").done(function(data){
@@ -51,11 +64,12 @@ $.getJSON("https://api.github.com/users/TimGass/repos").done(function(data){
     return swag - yolo;
   });
 
-
-  reposObj.forEach(function(item){
-    var time = new Date(item.updated_at);
-    var reposStats = "<section class=repo-stats><p> " + item.language + "<span class='octicon octicon-star'></span>" + item.stargazers_count + "<span class='octicon octicon-git-branch'></span>" + item.forks_count + "</p></section>";
-    var repos = $("<li class=repo-name ><a href=" + item.html_url + "> " + item.name + " </a>" + reposStats + "<p> updated " + gitTime(time) + " </p></li>");
-    $(".repos").append(repos);
+  function Repogenerator(){
+    var repoTemplate = $("#repos").html();
+    var compiledTemplate = _.template(repoTemplate);
+    reposObj.forEach(function(repoData) {
+      $(".repos").append(compiledTemplate(repoData));
+    });
+  };
+  Repogenerator();
   });
-});

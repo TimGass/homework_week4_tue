@@ -50,12 +50,43 @@
       </nav>
       <ul class="repos">
       </ul>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js">
-      </script>
-      <script src="token.js">
-      </script>
-      <script src="main.js">
-      </script>
     </main>
+    <script type="text/template" id="header">
+      <a><img src=<%= avatar_url %> alt="a picture of Timothy Gass" /><span class="octicon octicon-triangle-down" id="last"></span></a>
+    </script>
+    <script type="text/template" id="profile">
+      <img src=<%= avatar_url %> alt="a picture of Timothy Gass" />
+      <h1>  <%= name %> </h1>
+      <h2> <%= login %> </h2>
+      <h6> <%= location %> </h6>
+      <h6> Joined on <%= month %>/<%= day %>/<%= year %></h6>
+      <a href=#> <strong><%= followers %></strong> Followers </a>
+      <a href=#> <strong><%= starred %></strong> Starred </a>
+      <a href=#> <strong><%= following %></strong> Following </a>
+      <h4> Organizations <%= organizations %></h4>
+    </script>
+    <script type="text/template" id="repos">
+        <li class="repo-name">
+          <a href=<%= html_url %> > <%= name %></a>
+          <section class="repo-stats">
+            <p>
+              <%= language %>
+              <span class="octicon octicon-star"></span>
+              <%= stargazers_count %>
+              <span class="octicon octicon-git-branch"></span>
+              <%= forks_count %>
+            </p>
+          </section>
+          <p> updated <%= gitTime(updated_at) %> </p>
+        </li>
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js">
+    </script>
+    <script src="token.js">
+    </script>
+    <script src="main.js">
+    </script>
   </body>
 </html>
